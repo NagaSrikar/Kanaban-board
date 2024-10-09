@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KanbanBoard</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+    <h1 id="title">Kanban Board</h1>
+    <div class="colors">
+        <button class="custom" id="one"></button>
+        <button class="custom" id="two"></button>
+        <button class="custom" id="three"></button>
+        <button class="custom" id="four"></button>
+    </div>
+    <hr>
+
+    <div class="container">
+        <div id='append' class="board">
+            <img src="GNOME_Todo_icon_2019.svg.png" id="todo-image" alt="" class="image">
+            <h4 class="dark">Todo (<span id="todo-count">0</span>)</h4>
+            <button id='plus' class="add"> &#43;</button>
+            <input class="add" placeholder="&#43;AddTask">
+        </div>
+        <div id="depend" class="board">
+            <img src="images (1).png" alt="" class="image">
+            <input class="add" placeholder="&#43;AddTask">
+            <h4 class="dark">In Progress (<span id="in-progress-count">0</span>)</h4>
+            <button id='progress' class="add"> &#43;</button>
+        </div>
+        <div id='independent' class="board">
+            <img src="todo-2.png" alt="" class="image">
+            <h4 class="dark">Completed (<span id="completed-count">0</span>)</h4>
+            <button id='com' class="add"> &#43;</button>
+            <input class="add" placeholder="&#43;AddTask">
+        </div>
+
+    </div>
+    <footer>
+        <button class="add" id="enable">DarkMode</button>
+    </footer>
+
+</body>
+<script src="kanban.js"></script>
+
+</html>

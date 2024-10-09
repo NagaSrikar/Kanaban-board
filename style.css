@@ -1,0 +1,350 @@
+/* Global Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0px;
+    color: #333;
+    margin-left: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 12px;
+
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 20px;
+
+
+}
+
+/* Board Styling */
+.board {
+    width: 300px;
+    min-height: 500px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.board h4 {
+    color: #444;
+    font-size: 22px;
+    margin-bottom: -15px;
+    text-align: center;
+
+    padding-bottom: 10px;
+
+}
+
+/* Task List Styling */
+.task-list {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Task Styling */
+.task {
+    background-color: #f1f1f1;
+    color: #444;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task:hover {
+    background-color: #e2e2e2;
+}
+
+.task .btn {
+    background: none;
+    border: none;
+    color: #ff5c5c;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Button Styling */
+.add {
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.add:hover {
+    background-color: #2563eb;
+}
+
+.add:focus {
+    outline: none;
+}
+
+/* Input Styling */
+input.add {
+
+    margin-top: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9fafb;
+    width: 200px;
+}
+
+input.add::placeholder {
+    color: #a0aec0;
+}
+
+input.add:focus {
+    border-color: #3b82f6;
+    outline: none;
+    background-color: white;
+}
+
+/* Plus button styling */
+#plus,
+#progress,
+#com {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-left: 210px;
+    margin-bottom: 3px;
+
+}
+
+#plus:hover,
+#progress:hover,
+#com:hover {
+    background-color: #2563eb;
+}
+
+hr {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+
+.image {
+    display: inline;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    top: 0%;
+    left: 65%;
+}
+
+h4 {
+    position: relative;
+    top: -8%;
+    left: -17%;
+}
+
+#todo-image {
+    position: relative;
+    left: 50%;
+}
+
+#new-board {
+    position: fixed;
+    height: 50px;
+    width: 200px;
+
+}
+
+.new {
+    width: 300px;
+    min-height: 500px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.custom {
+
+    border: none;
+    border-radius: 10%;
+    padding: 5px;
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+
+}
+
+.custom:hover {
+    background-color: #2563eb;
+}
+
+#one {
+    position: absolute;
+    left: 67%;
+    top: 3%;
+    background-color: yellow;
+}
+
+#two {
+    position: absolute;
+    left: 72%;
+    top: 3%;
+    background-color: red;
+}
+
+#three {
+    position: absolute;
+    left: 77%;
+    top: 3%;
+    background-color: green;
+}
+
+#four {
+    position: absolute;
+    left: 82%;
+    top: 3%;
+    background-color: pink;
+}
+
+.colors {
+    margin-top: 2px;
+}
+
+#enable {
+    width: 150px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 940px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (max-width:500px) {
+    #enable {
+        position: absolute;
+        bottom: -100%;
+        left: 2%;
+
+    }
+
+    #title {
+        font-size: 20px;
+        margin-left: -180px;
+    }
+
+    .custom {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .colors {
+        margin-left: -125px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #enable {
+        position: absolute;
+        bottom: -100%;
+        left: 2%;
+
+    }
+
+    #title {
+        font-size: 20px;
+        margin-left: -180px;
+    }
+
+    .custom {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .colors {
+        margin-left: -125px;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    #enable {
+        position: absolute;
+        bottom: -8%;
+        left: 2%;
+
+    }
+
+}
+
+@media only screen and (max-width:420px) {
+    #enable {
+        position: absolute;
+        bottom: -88%;
+        left: 2%;
+
+    }
+
+}
+
+@media only screen and (max-width:500px) {
+    #enable {
+        position: absolute;
+        bottom: -99%;
+        left: 2%;
+
+    }
+
+}
+
+/**********************************************/
